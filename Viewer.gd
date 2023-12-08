@@ -12,7 +12,7 @@ func _on_files_dropped(files):
 	var texture = ImageTexture.create_from_image(image)
 	$Control/Label.text = path
 	$WorldEnvironment.environment.sky.sky_material.panorama = texture
-	$TrackballCamera.reset_rotation()
+	$TrackballCamera.set_rotation(Vector3())
 
 
 func _on_v_slider_mouse_entered():
